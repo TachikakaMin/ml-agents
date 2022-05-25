@@ -274,7 +274,7 @@ class UnityToGymWrapper(gym.Env):
         result = 0
         for obs_spec in self.group_spec.observation_specs:
             if len(obs_spec.shape) == 1:
-                result += obs_spec.shape[0]
+                result += 1
         return result
 
     def render(self, mode="rgb_array"):
